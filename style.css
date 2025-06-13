@@ -150,7 +150,7 @@ button:hover {
 #result-area.show {
     visibility: visible;
     opacity: 1;
-    max-height: 1000px; /* Espaço para o conteúdo aparecer */
+    max-height: 1000px;
     margin-top: 1.5rem;
 }
 
@@ -223,12 +223,12 @@ button:hover {
     100% { transform: rotate(360deg); }
 }
 
-/* Classes de utilidade para controle via JS */
+
 .hidden {
     display: none;
 }
 
-/* --- MELHORIAS DE RESPONSIVIDADE --- */
+
 @media (max-width: 480px) {
     body {
         padding: 1rem;
