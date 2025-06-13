@@ -27,7 +27,7 @@ let currentPercentage = 0;
 
 // --- Event Listeners ---
 calculateBtn.addEventListener('click', () => {
-    // Esconde resultados anteriores ao calcular novamente
+
     resultArea.classList.remove('show');
     shareArea.classList.add('hidden');
     analysisResult.classList.add('hidden');
@@ -63,14 +63,14 @@ downloadBtn.addEventListener('click', () => {
     link.click();
 });
 
-// --- Funções de Cálculo e Geração de Imagem ---
+//--Calcular e gerar Imagens--
 function calculateLove(name1, name2) {
     const combinedNames = (name1 + name2).toLowerCase();
     let sum = 0;
     for (let i = 0; i < combinedNames.length; i++) {
         sum += combinedNames.charCodeAt(i);
     }
-    return (sum % 61) + 40; // Garante que o resultado esteja entre 40% e 100%
+    return (sum % 61) + 40; 
 }
 
 function generateInitialImage(name1, name2, percentage) {
@@ -106,8 +106,8 @@ function generateShareableImage(name1, name2) {
     shareableCtx.fillRect(0, 0, shareableCanvas.width, shareableCanvas.height);
 
     shareableCtx.fillStyle = 'rgba(255, 77, 109, 0.8)';
-    drawHeart(shareableCtx, 140, 150, 80); // Coração da esquerda
-    drawHeart(shareableCtx, 360, 150, 80); // Coração da direita
+    drawHeart(shareableCtx, 140, 150, 80);
+    drawHeart(shareableCtx, 360, 150, 80); 
 
     shareableCtx.fillStyle = '#ffffff';
     shareableCtx.font = 'bold 30px Poppins';
