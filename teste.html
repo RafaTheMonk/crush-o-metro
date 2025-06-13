@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora do Amor ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <main class="love-calculator">
+        <h1>Calculadora do Amor</h1>
+        <p>Descubra a vossa compatibilidade! Insira dois nomes e veja a magia acontecer.</p>
+
+        <div class="input-group">
+            <input type="text" id="name1" placeholder="O seu nome" aria-label="Seu Nome">
+        </div>
+
+        <div class="heart-icon">❤️</div>
+
+        <div class="input-group">
+            <input type="text" id="name2" placeholder="O nome do seu crush" aria-label="Nome do seu crush">
+        </div>
+
+        <button id="calculate-btn">Calcular</button>
+        <div id="error-message" class="feedback-message">Por favor, preencha os dois nomes.</div>
+
+        <section id="result-area">
+            <h2 id="result-percentage"></h2>
+            <img id="result-image" alt="Resultado da compatibilidade em imagem">
+            <p class="info-text">Clique na imagem para criar uma partilhável!</p>
+
+            <div id="share-area" class="hidden">
+                <img id="shareable-image" alt="Imagem de compatibilidade partilhável">
+                <button id="download-btn" class="download-btn">⬇️ Fazer download</button>
+            </div>
+
+            <div id="extra-actions">
+                <button id="analysis-btn" class="extra-btn">✨ Analisar Compatibilidade</button>
+                <button id="date-idea-btn" class="extra-btn">✨ Sugerir Encontro Ideal</button>
+            </div>
+            <div id="analysis-result" class="extra-result hidden"></div>
+            <div id="date-idea-result" class="extra-result hidden"></div>
+        </section>
+
+        <canvas id="loveCanvas" width="500" height="300" class="hidden"></canvas>
+        <canvas id="shareableCanvas" width="500" height="300" class="hidden"></canvas>
+    </main>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+:root {
+    --primary-color: #ff4d6d;
+    --secondary-color: #ffb3c1;
+    --dark-color: #c9184a;
+    --light-color: #fff0f3;
+    --text-color: #590d22;
+    --extra-btn-color: #8338ec;
+    --download-btn-color: #2a9d8f;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--light-color), #ffffff);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+.love-calculator {
+    background-color: white;
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    border: 1px solid #ffe0e5;
+    transition: all 0.3s ease;
+}
+
+.love-calculator h1 {
+    font-family: 'Pacifico', cursive;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.love-calculator p {
+    margin-bottom: 2rem;
+    color: #800f2f;
+    font-size: 0.95rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ffc2d1;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--secondary-color);
+}
+
+.heart-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+    animation: beat 1.5s infinite ease-in-out;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+button {
+    background: linear-gradient(45deg, var(--primary-color), var(--dark-color));
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.3s;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 77, 109, 0.3);
+}
+
+.extra-btn,
+.download-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+    margin-top: 0.5rem;
+}
+
+.extra-btn {
+    background: linear-gradient(45deg, var(--extra-btn-color), #3a0ca3);
+}
+
+.extra-btn:hover {
+    box-shadow: 0 8px 20px rgba(131, 56, 236, 0.3);
+}
+
+.download-btn {
+    background: linear-gradient(45deg, var(--download-btn-color), #264653);
+}
+
+.download-btn:hover {
+    box-shadow: 0 8px 20px rgba(42, 157, 143, 0.3);
+}
+
+.feedback-message {
+    color: var(--dark-color);
+    font-weight: 500;
+    height: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.feedback-message.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+#result-area {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+#result-area.show {
+    visibility: visible;
+    opacity: 1;
+    max-height: 1000px; /* Espaço para o conteúdo aparecer */
+    margin-top: 1.5rem;
+}
+
+#result-area h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+#result-image {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    margin-top: 1rem;
+    border: 2px solid var(--light-color);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#result-image:hover {
+    transform: scale(1.03);
+}
+
+.info-text {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: -0.5rem;
+}
+
+#share-area {
+    margin-top: 1.5rem;
+}
+
+#shareable-image {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--light-color);
+}
+
+.extra-result {
+    background-color: var(--light-color);
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: left;
+    border: 1px solid var(--secondary-color);
+}
+
+.extra-result h3 {
+    font-family: 'Pacifico', cursive;
+    color: var(--dark-color);
+    margin-top: 0;
+    text-align: center;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-left-color: var(--extra-btn-color);
+    margin: 1rem auto;
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Classes de utilidade para controle via JS */
+.hidden {
+    display: none;
+}
+
+/* --- MELHORIAS DE RESPONSIVIDADE --- */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .love-calculator {
+        padding: 1.5rem;
+    }
+
+    .love-calculator h1 {
+        font-size: 2.2rem;
+    }
+
+    #result-area h2 {
+        font-size: 1.8rem;
+    }
+
+    button,
+    .extra-btn,
+    .download-btn {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+}
