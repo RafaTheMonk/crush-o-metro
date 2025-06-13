@@ -163,8 +163,7 @@ function showResult(element, title, text) {
 }
 
 async function callGenerativeAPI(prompt) {
-    // IMPORTANTE: Substitua pela sua chave de API real
-    const apiKey = "AIzaSyAgsHQYLJAHY65dYEN5wwddjLJjrRrzYi4"; 
+    const apiKey = "removi a chave por motivos de segurança"; 
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
     const payload = { contents: [{ parts: [{ text: prompt }] }] };
 
