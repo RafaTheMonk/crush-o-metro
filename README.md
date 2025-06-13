@@ -1,2 +1,9 @@
-# crush-o-metro
-Uma Calculadora do Amor divertida criada com HTML, CSS e JavaScript puro. O projeto calcula uma pontuação de compatibilidade entre dois nomes e usa a API do Google Gemini para gerar análises e sugestões de encontros de forma criativa.
+💻 Projeto front-end de uma Calculadora de Compatibilidade, desenvolvido para praticar manipulação do DOM, HTML Canvas e a integração com APIs externas.
+
+✨ Funcionalidades:
+
+Cálculo de pontuação de compatibilidade.
+Geração de imagem dinâmica e partilhável com o resultado.
+Integração com a API do Google Gemini para gerar conteúdo de texto criativo.
+Interface totalmente responsiva para mobile e desktop.
+🚀 Tecnologias: HTML5, CSS3, JavaScript (ES6+), Google Gemini API.
